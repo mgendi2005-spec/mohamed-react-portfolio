@@ -1,9 +1,9 @@
-function ProjectCard({ project }) {
+function ProjectCard({ project, featured = false }) {
   const mainImage = project.images?.[0];
   const secondImage = project.images?.[1];
 
   return (
-    <article className="project-card">
+    <article className={`project-card${featured ? " project-card-featured" : ""}`}>
       <div className="project-image-wrapper">
         {mainImage ? (
           <>
@@ -54,7 +54,7 @@ function ProjectCard({ project }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visit Website ↗
+            Visit Website
           </a>
         )}
       </div>

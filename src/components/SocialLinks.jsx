@@ -1,8 +1,6 @@
+import Reveal from "./Reveal";
+
 const socialLinks = [
-  {
-    name: "GitHub",
-    url: "https://github.com/mgendi2005-spec",
-  },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/mohamed-el-gendy-b2a99235a",
@@ -19,15 +17,17 @@ const socialLinks = [
 
 function SocialLinks() {
   return (
-    <ul className="social-links">
-      {socialLinks.map((link) => (
-        <li key={link.name}>
-          <a href={link.url} target="_blank" rel="noreferrer">
-            {link.name}
-          </a>
-        </li>
-      ))}
-    </ul>
+    <Reveal delay={0.38}>
+      <ul className="social-links">
+        {socialLinks.map((link) => (
+          <li key={link.name}>
+            <a href={link.url} target="_blank" rel="noreferrer">
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Reveal>
   );
 }
 
