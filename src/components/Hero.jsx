@@ -1,5 +1,24 @@
+import { motion } from "motion/react";
 import { useEffect, useRef } from "react";
-import Reveal from "./Reveal";
+
+const heroContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0,
+    },
+  },
+};
+
+const heroItem = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, ease: "easeOut" },
+  },
+};
 
 function Hero() {
   const heroRef = useRef(null);
@@ -46,35 +65,39 @@ function Hero() {
 
   return (
     <section id="home" className="hero" ref={heroRef}>
-      <div className="hero-inner">
-        <Reveal delay={0}>
-          <p className="hero-intro">Hi, my name is</p>
-        </Reveal>
+      <motion.div
+        className="hero-inner"
+        variants={heroContainer}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.p className="hero-intro" variants={heroItem}>
+          Hi, my name is
+        </motion.p>
 
-        <Reveal delay={0.08}>
-          <h1 className="hero-title">Mohamed El Gendy.</h1>
-        </Reveal>
+        <motion.h1 className="hero-title" variants={heroItem}>
+          Mohamed El Gendy.
+        </motion.h1>
 
-        <Reveal delay={0.16}>
-          <h2 className="hero-subtitle">
-            I build products across software and engineering.
-          </h2>
-        </Reveal>
+        <motion.h2 className="hero-subtitle" variants={heroItem}>
+          I build products across software and engineering.
+        </motion.h2>
 
-        <Reveal delay={0.24}>
-          <p className="hero-description">
-            I’m a mechatronics engineering student and full-stack developer focused
-            on building responsive web experiences, startup products, and practical
-            engineering systems.
-          </p>
-        </Reveal>
+        <motion.p className="hero-description" variants={heroItem}>
+          I’m a mechatronics engineering student and full-stack developer focused
+          on building responsive web experiences, startup products, and practical
+          engineering systems.
+        </motion.p>
 
-        <Reveal delay={0.32}>
-          <a className="hero-button" href="#projects">
-            Explore My Work
-          </a>
-        </Reveal>
-      </div>
+        <motion.a
+          className="hero-button"
+          href="#projects"
+          variants={heroItem}
+          transition={{ duration: 0.35, ease: "easeOut" }}
+        >
+          Explore My Work
+        </motion.a>
+      </motion.div>
     </section>
   );
 }
