@@ -26,8 +26,12 @@ function Hero() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const hasFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const prefersReduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const hasFinePointer = window.matchMedia(
+      "(hover: hover) and (pointer: fine)",
+    ).matches;
     if (prefersReduce || !hasFinePointer) return;
 
     const element = heroRef.current;
@@ -84,9 +88,8 @@ function Hero() {
         </motion.h2>
 
         <motion.p className="hero-description" variants={heroItem}>
-          I’m a mechatronics engineering student and full-stack developer focused
-          on building responsive web experiences, startup products, and practical
-          engineering systems.
+          I’m a full-stack developer focused on building responsive web
+          experiences, startup products, and practical systems.
         </motion.p>
 
         <motion.a
