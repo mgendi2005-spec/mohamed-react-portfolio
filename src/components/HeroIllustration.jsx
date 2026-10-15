@@ -6,7 +6,9 @@ function HeroIllustration() {
       role="img"
       aria-labelledby="hero-illustration-title hero-illustration-description"
     >
-      <title id="hero-illustration-title">Developer working at a computer</title>
+      <title id="hero-illustration-title">
+        Developer working at a computer
+      </title>
       <desc id="hero-illustration-description">
         A geometric illustration of a developer working at a laptop, accented
         with violet light.
@@ -19,12 +21,7 @@ function HeroIllustration() {
         ry="30"
         fill="var(--illustration-shadow)"
       />
-      <circle
-        cx="271"
-        cy="206"
-        r="151"
-        fill="var(--illustration-halo)"
-      />
+      <circle cx="271" cy="206" r="151" fill="var(--illustration-halo)" />
       <circle
         cx="271"
         cy="206"

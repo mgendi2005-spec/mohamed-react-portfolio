@@ -86,7 +86,7 @@ function Hero() {
           </motion.p>
 
           <motion.h1 className="hero-title" variants={heroItem}>
-            Mohamed El Gendy.
+            Mohamed El Gendi.
           </motion.h1>
 
           <motion.p className="hero-role-line" variants={heroItem}>
@@ -105,7 +105,7 @@ function Hero() {
 
           <motion.div className="hero-actions" variants={heroItem}>
             <a className="hero-button" href="#projects">
-              Explore My Work <span aria-hidden="true">↗</span>
+              Explore My Work <span aria-hidden="true"></span>
             </a>
             <Link className="hero-button hero-button-secondary" to="/contact">
               Contact Me

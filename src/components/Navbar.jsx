@@ -18,7 +18,7 @@ function Navbar() {
     <header className={`site-header${scrolled ? " site-header-scrolled" : ""}`}>
       <nav className="navbar" aria-label="Primary navigation">
         <NavLink className="brand" to="/" end>
-          Mohamed El Gendy
+          Mohamed El Gendi
         </NavLink>
 
         <div className="nav-links">
