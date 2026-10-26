@@ -807,3 +807,117 @@ main {
     box-shadow: none;
   }
 }
+
+/* ================= Glow hover upgrade ================= */
+
+/* The hero clips overflow, which would cut off the glow on the left edge.
+   overflow: clip + a margin lets the glow paint outside without adding scroll. */
+.hero {
+  overflow: clip;
+  overflow-clip-margin: 70px;
+}
+
+/* ---------- Primary button: Explore My Work ---------- */
+.hero-button {
+  transition:
+    transform 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease,
+    background-color 250ms ease,
+    filter 250ms ease;
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+  transform: translateY(-3px) scale(1.04);
+  filter: brightness(1.1);
+  border-color: #e3a4ff;
+  box-shadow:
+    0 0 0 1px rgba(227, 164, 255, 0.55),
+    0 0 18px rgba(198, 92, 245, 0.7),
+    0 0 44px rgba(198, 92, 245, 0.5),
+    0 14px 36px rgba(166, 72, 211, 0.4);
+}
+
+/* ---------- Secondary button: Contact Me ---------- */
+.hero-button-secondary:hover,
+.hero-button-secondary:focus-visible {
+  border-color: #d783ff;
+  background: rgba(198, 92, 245, 0.16);
+  color: #fff;
+  filter: none;
+  box-shadow:
+    0 0 16px rgba(198, 92, 245, 0.55),
+    0 0 36px rgba(198, 92, 245, 0.3),
+    inset 0 0 16px rgba(198, 92, 245, 0.22);
+}
+
+/* ---------- Nav links ---------- */
+.nav-link {
+  transition:
+    color 220ms ease,
+    text-shadow 220ms ease;
+}
+
+.nav-link:hover,
+.nav-link-active {
+  color: #e9c2ff;
+  text-shadow:
+    0 0 10px rgba(198, 92, 245, 0.9),
+    0 0 24px rgba(198, 92, 245, 0.55);
+}
+
+.nav-link::after {
+  height: 2px;
+  box-shadow: 0 0 10px rgba(198, 92, 245, 0.9);
+}
+
+.brand {
+  transition: text-shadow 250ms ease;
+}
+
+.brand:hover {
+  text-shadow: 0 0 18px rgba(198, 92, 245, 0.7);
+}
+
+/* ---------- Project and contact cards ---------- */
+.project-card:hover,
+.project-card:focus-within,
+.contact-card:hover,
+.contact-card:focus-within {
+  border-color: rgba(227, 164, 255, 0.75);
+  box-shadow:
+    0 0 0 1px rgba(198, 92, 245, 0.5),
+    0 0 26px rgba(198, 92, 245, 0.4),
+    0 24px 60px rgba(166, 72, 211, 0.3);
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-6px);
+}
+
+/* ---------- Links ---------- */
+.project-link:hover,
+.project-link:focus-visible,
+.view-all-projects:hover {
+  color: #e9c2ff;
+  text-shadow: 0 0 12px rgba(198, 92, 245, 0.8);
+}
+
+.social-links a:hover {
+  color: #e9c2ff;
+  text-shadow: 0 0 12px rgba(198, 92, 245, 0.8);
+}
+
+/* Reduced motion: keep the glow, drop the movement */
+@media (prefers-reduced-motion: reduce) {
+  .hero-button:hover,
+  .hero-button:focus-visible,
+  .project-card:hover,
+  .project-card:focus-within,
+  .contact-card:hover,
+  .contact-card:focus-within {
+    transform: none;
+  }
+}

@@ -99,8 +99,8 @@ function Hero() {
           </motion.h2>
 
           <motion.p className="hero-description" variants={heroItem}>
-            I’m a full-stack developer focused on building responsive web
-            experiences, startup products, and practical systems.
+            I’m a web developer focused on building responsive web experiences,
+            startup products, and practical systems.
           </motion.p>
 
           <motion.div className="hero-actions" variants={heroItem}>

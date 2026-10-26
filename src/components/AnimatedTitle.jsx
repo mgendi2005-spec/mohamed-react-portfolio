@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import { useReducedMotion } from "motion/react";
 
 const titles = [
-  "Bachelor In Mechatronics Engineering ",
-  "Frontend Developer",
-  "Control Systems Enthusiast",
-  "PCB Designer",
+  "E-Commerce Expert",
+  "WordPress Developer",
+  "Software Engineer",
 ];
 
 function AnimatedTitle() {
